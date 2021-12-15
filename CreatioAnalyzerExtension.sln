@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31911.196
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreatioAnalyzerExtension", "CreatioAnalyzerExtension\CreatioAnalyzerExtension.csproj", "{CFA3A5EB-6314-44E0-BF4A-3B7969F07B04}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreatioAnalyzerExtension.CodeFixes", "CreatioAnalyzerExtension.CodeFixes\CreatioAnalyzerExtension.CodeFixes.csproj", "{025B06C6-1BCC-4FEB-AF37-23A0A985289A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreatioAnalyzerExtension.Package", "CreatioAnalyzerExtension.Package\CreatioAnalyzerExtension.Package.csproj", "{0276E46C-042C-4F6C-8A3D-B259B6B82615}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreatioAnalyzerExtension.Test", "CreatioAnalyzerExtension.Test\CreatioAnalyzerExtension.Test.csproj", "{FC656CA4-418A-4A83-A9DC-35B95B629155}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreatioAnalyzerExtension.Vsix", "CreatioAnalyzerExtension.Vsix\CreatioAnalyzerExtension.Vsix.csproj", "{F3A86B3E-0C27-40D4-A451-0ECF4E9BAB99}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CFA3A5EB-6314-44E0-BF4A-3B7969F07B04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFA3A5EB-6314-44E0-BF4A-3B7969F07B04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFA3A5EB-6314-44E0-BF4A-3B7969F07B04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFA3A5EB-6314-44E0-BF4A-3B7969F07B04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{025B06C6-1BCC-4FEB-AF37-23A0A985289A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{025B06C6-1BCC-4FEB-AF37-23A0A985289A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{025B06C6-1BCC-4FEB-AF37-23A0A985289A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{025B06C6-1BCC-4FEB-AF37-23A0A985289A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0276E46C-042C-4F6C-8A3D-B259B6B82615}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0276E46C-042C-4F6C-8A3D-B259B6B82615}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0276E46C-042C-4F6C-8A3D-B259B6B82615}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0276E46C-042C-4F6C-8A3D-B259B6B82615}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC656CA4-418A-4A83-A9DC-35B95B629155}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC656CA4-418A-4A83-A9DC-35B95B629155}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC656CA4-418A-4A83-A9DC-35B95B629155}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC656CA4-418A-4A83-A9DC-35B95B629155}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3A86B3E-0C27-40D4-A451-0ECF4E9BAB99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3A86B3E-0C27-40D4-A451-0ECF4E9BAB99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3A86B3E-0C27-40D4-A451-0ECF4E9BAB99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3A86B3E-0C27-40D4-A451-0ECF4E9BAB99}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FB5FD656-A3C1-4590-B0A1-03F8B5A8FA7A}
+	EndGlobalSection
+EndGlobal
