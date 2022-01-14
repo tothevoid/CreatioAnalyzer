@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Threading.Tasks;
 using VerifyCS = CreatioAnalyzerExtension.Test.CSharpCodeFixVerifier<
-    CreatioAnalyzerExtension.EsqFilterAnalyzer,
+    CreatioAnalyzerExtension.EsqExtraJoinAnalyzer,
     CreatioAnalyzerExtension.EsqFilterCodeFixProvider>;
 
 namespace CreatioAnalyzerExtension.Test
@@ -23,7 +23,7 @@ namespace CreatioAnalyzerExtension.Test
         {
             var test = @"
                 using Terrasoft.Core.Entities;
-                namespace ConsoleApplication1
+                namespace ConsoleApplication
                 {
                     public class TestClass
                     {
@@ -37,7 +37,7 @@ namespace CreatioAnalyzerExtension.Test
 
             var fixtest = @"
                 using Terrasoft.Core.Entities;
-                namespace ConsoleApplication1
+                namespace ConsoleApplication
                 {
                     public class TestClass
                     {

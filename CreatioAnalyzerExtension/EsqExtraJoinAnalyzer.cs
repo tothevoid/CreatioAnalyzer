@@ -1,4 +1,5 @@
-﻿using Microsoft.CodeAnalysis;
+﻿using CreatioAnalyzerExtension.Constants;
+using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
@@ -9,19 +10,17 @@ using System.Linq;
 namespace CreatioAnalyzerExtension
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    public class EsqFilterAnalyzer : DiagnosticAnalyzer
+    public class EsqExtraJoinAnalyzer : DiagnosticAnalyzer
     {
-        public static string DiagnosticId => "ExtraJoin";
-
-        private static DiagnosticDescriptor FilterRule =
+        private readonly static DiagnosticDescriptor FilterRule =
             new DiagnosticDescriptor(
-                DiagnosticId,
-                new LocalizableResourceString(nameof(Resources.AnalyzerTitle), Resources.ResourceManager, typeof(Resources)).ToString(),
-                new LocalizableResourceString(nameof(Resources.AnalyzerMessageFormat), Resources.ResourceManager, typeof(Resources)).ToString(),
+                DiagnosticId.EsqExtraJoin,
+                new LocalizableResourceString(nameof(Resources.ExtraJoinTitle), Resources.ResourceManager, typeof(Resources)).ToString(),
+                new LocalizableResourceString(nameof(Resources.ExtraJoinMessageFormat), Resources.ResourceManager, typeof(Resources)).ToString(),
                 "Naming",
                 DiagnosticSeverity.Warning,
                 isEnabledByDefault: true,
-                description: new LocalizableResourceString(nameof(Resources.AnalyzerDescription), Resources.ResourceManager, typeof(Resources)).ToString());
+                description: new LocalizableResourceString(nameof(Resources.ExtraJoinDescription), Resources.ResourceManager, typeof(Resources)).ToString());
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(FilterRule); } }
 
@@ -49,7 +48,7 @@ namespace CreatioAnalyzerExtension
                 var argumentValue = argumentTokens.First().ValueText;
                 if (!string.IsNullOrEmpty(argumentValue) && argumentValue.Split('.').Last() == "Id")
                 {
-                    var diagnostic = Diagnostic.Create(FilterRule, context.Node.GetLocation(), argumentValue, 
+                    var diagnostic = Diagnostic.Create(FilterRule, context.Node.GetLocation(), argumentValue,
                         argumentValue.Substring(0, argumentValue.Length - 3));
                     context.ReportDiagnostic(diagnostic);
                 }

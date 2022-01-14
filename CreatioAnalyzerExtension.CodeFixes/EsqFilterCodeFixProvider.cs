@@ -1,4 +1,5 @@
-﻿using Microsoft.CodeAnalysis;
+﻿using CreatioAnalyzerExtension.Constants;
+using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CodeActions;
 using Microsoft.CodeAnalysis.CodeFixes;
 using Microsoft.CodeAnalysis.CSharp;
@@ -19,7 +20,7 @@ namespace CreatioAnalyzerExtension
     public class EsqFilterCodeFixProvider : CodeFixProvider
     {
         public sealed override ImmutableArray<string> FixableDiagnosticIds =>
-            ImmutableArray.Create(EsqFilterAnalyzer.DiagnosticId);
+            ImmutableArray.Create(DiagnosticId.EsqExtraJoin);
 
         public sealed override FixAllProvider GetFixAllProvider() =>
             WellKnownFixAllProviders.BatchFixer;
